@@ -1,1 +1,257 @@
+body,
+p,
+h1,
+h2,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1d1815;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  border-bottom: 5px solid #222222;
+}
+
+.bg-intro {
+  background: url(../img/netflix-bg-intro.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+@media (max-width: 531px) {
+  .bg-intro {
+    height: 550px;
+  }
+}
+.bg-intro .bg-filter {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+  height: inherit;
+}
+@media (max-width: 531px) {
+  .bg-intro .bg-filter {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
+  }
+}
+.bg-intro .flex-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+@media (max-width: 531px) {
+  header {
+    padding: 20px 30px;
+  }
+}
+header .logo {
+  width: 170px;
+}
+@media (max-width: 1431px) {
+  header .logo {
+    width: 130px;
+  }
+}
+@media (max-width: 931px) {
+  header .logo {
+    width: 110px;
+  }
+}
+@media (max-width: 531px) {
+  header .logo {
+    width: 90px;
+  }
+}
+header .lang--enter {
+  display: flex;
+  align-items: center;
+}
+header .lang--enter .language-choose {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+}
+header .lang--enter .language-choose::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+header .lang--enter .language-choose #language {
+  background: none;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+header .lang--enter .language-choose #language option {
+  background-color: #6a756a;
+}
+header .lang--enter a {
+  display: block;
+  background-color: #f40612;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 3px;
+  margin-left: 30px;
+}
+@media (max-width: 531px) {
+  header .lang--enter a {
+    margin-left: 15px;
+  }
+}
+
+.big-size {
+  font-size: 4rem;
+  font-weight: bold;
+}
+@media (max-width: 1431px) {
+  .big-size {
+    font-size: 3.125rem;
+    line-height: 55px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 531px) {
+  .big-size {
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 30px;
+  }
+}
+
+.medium-size {
+  font-size: 1.625rem;
+  list-style: 21.7px;
+}
+@media (max-width: 531px) {
+  .medium-size {
+    font-size: 1.1875rem;
+    line-height: 16px;
+  }
+}
+
+.intro-texts {
+  align-self: center;
+  text-align: center;
+  padding: 120px calc((100% - 700px) / 2);
+  margin: 0px 15px;
+}
+.intro-texts .big-size {
+  text-align: center;
+}
+.intro-texts .medium-size {
+  margin: 20px 0px 25px 0px;
+}
+.intro-texts p:nth-child(3) {
+  font-size: 1.1875rem;
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+@media (max-width: 931px) {
+  .intro-texts p:nth-child(3) {
+    font-size: 23px;
+    max-width: 450px;
+    line-height: 30px;
+    margin: auto;
+  }
+}
+@media (max-width: 531px) {
+  .intro-texts p:nth-child(3) {
+    font-size: 1.1875rem;
+    line-height: 16px;
+  }
+}
+.intro-texts form {
+  display: flex;
+  max-width: 630px;
+  margin: auto;
+}
+@media (max-width: 931px) {
+  .intro-texts form {
+    flex-direction: column;
+    max-width: 500px;
+  }
+}
+.intro-texts form input[type=text] {
+  padding: 15px 10px;
+  border-radius: 2px 0px 0px 2px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  flex: 1;
+}
+.intro-texts form input[type=text]::placeholder {
+  color: #908c8c;
+}
+@media (max-width: 931px) {
+  .intro-texts form input[type=text] {
+    margin: 15px 0px;
+    padding: 20px 10px;
+    border-radius: 2px;
+  }
+}
+@media (max-width: 531px) {
+  .intro-texts form input[type=text] {
+    padding: 15px;
+  }
+}
+.intro-texts form .inpt-submit--intro {
+  padding: 15px;
+  background-color: #f40612;
+  border-radius: 0px 2px 2px 0px;
+  cursor: pointer;
+}
+@media (max-width: 931px) {
+  .intro-texts form .inpt-submit--intro {
+    margin: auto;
+    padding: 10px;
+    border-radius: 3px;
+  }
+}
+.intro-texts form .inpt-submit--intro input[type=submit] {
+  background: none;
+  border: none;
+  font-size: 1.625rem;
+  list-style: 21.7px;
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 931px) {
+  .intro-texts form .inpt-submit--intro input[type=submit] {
+    font-size: 1rem;
+  }
+}
+.intro-texts form .inpt-submit--intro span {
+  font-size: 1.625rem;
+  list-style: 21.7px;
+}
+@media (max-width: 931px) {
+  .intro-texts form .inpt-submit--intro span {
+    font-size: 1rem;
+  }
+}

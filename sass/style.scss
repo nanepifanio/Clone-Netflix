@@ -1,0 +1,237 @@
+@import "var-e-mixins";
+@import "reset";
+
+body {
+  background-color: $bg-body;
+  color: $cor-secundaria;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  border-bottom: 5px solid $color-borderbottom-section;
+}
+
+.bg-intro {
+  background: url(../img/netflix-bg-intro.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+
+  @include third-break {
+    height: 550px;
+  }
+
+  .bg-filter {
+    background-image: linear-gradient(
+      180deg,
+      rgb(0, 0, 0, 0.85),
+      rgb(0, 0, 0, 0.4),
+      rgb(0, 0, 0, 0.9)
+    );
+    height: inherit;
+
+    @include third-break {
+      background-image: linear-gradient(
+        180deg,
+        rgb(0, 0, 0, 0.9),
+        rgb(0, 0, 0, 0.2),
+        rgb(0, 0, 0, 0.9)
+      );
+    }
+  }
+
+  .flex-intro {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+
+  @include third-break {
+    padding: 20px 30px;
+  }
+
+  .logo {
+    width: 170px;
+
+    @include first-break {
+      width: 130px;
+    }
+
+    @include second-break {
+      width: 110px;
+    }
+
+    @include third-break {
+      width: 90px;
+    }
+  }
+
+  .lang--enter {
+    display: flex;
+    align-items: center;
+
+    .language-choose {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border: 1px solid rgb(255, 255, 255, 0.5);
+      border-radius: 3px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid rgb(255, 255, 255, 0.5);
+      }
+
+      #language {
+        background: none;
+        border: none;
+        color: $cor-secundaria;
+        outline: none;
+
+        option {
+          background-color: $grey;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      background-color: $cor-primaria;
+      color: $cor-secundaria;
+      padding: 8px 15px;
+      border-radius: 3px;
+      margin-left: 30px;
+
+      @include third-break {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.big-size {
+  @include font-size(64);
+
+  @include first-break {
+    @include font-size(50);
+  }
+
+  @include third-break {
+    @include font-size(28);
+  }
+}
+
+.medium-size {
+  @include font-size(26);
+
+  @include third-break {
+    @include font-size(19);
+  }
+}
+
+.intro-texts {
+  align-self: center;
+  text-align: center;
+  padding: 120px calc((100% - 700px) / 2);
+  margin: 0px 15px;
+
+  .big-size {
+    text-align: center;
+  }
+
+  .medium-size {
+    margin: 20px 0px 25px 0px;
+  }
+
+  & p:nth-child(3) {
+    @include font-size(19);
+    margin-bottom: 20px;
+
+    @include second-break {
+      font-size: 23px;
+      max-width: 450px;
+      line-height: 30px;
+      margin: auto;
+    }
+
+    @include third-break {
+      @include font-size(19);
+    }
+  }
+
+  form {
+    display: flex;
+    max-width: 630px;
+    margin: auto;
+
+    @include second-break {
+      flex-direction: column;
+      max-width: 500px;
+    }
+
+    input[type="text"] {
+      padding: 15px 10px;
+      border-radius: 2px 0px 0px 2px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+      flex: 1;
+
+      &::placeholder {
+        color: #908c8c;
+      }
+
+      @include second-break {
+        margin: 15px 0px;
+        padding: 20px 10px;
+        border-radius: 2px;
+      }
+
+      @include third-break {
+        padding: 15px;
+      }
+    }
+
+    .inpt-submit--intro {
+      padding: 15px;
+      background-color: $cor-primaria;
+      border-radius: 0px 2px 2px 0px;
+      cursor: pointer;
+
+      @include second-break {
+        margin: auto;
+        padding: 10px;
+        border-radius: 3px;
+      }
+
+      input[type="submit"] {
+        background: none;
+        border: none;
+        @include font-size(26);
+        color: $cor-secundaria;
+        cursor: pointer;
+
+        @include second-break {
+          font-size: 1rem;
+        }
+      }
+
+      span {
+        @include font-size(26);
+
+        @include second-break {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

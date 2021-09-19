@@ -1,0 +1,47 @@
+$cor-primaria: #f40612;
+$cor-secundaria: #fff;
+$bg-body: #1d1815;
+$color-borderbottom-section: #222222;
+$grey: #6a756a;
+
+@mixin font-size($size) {
+  @if $size == 50 {
+    font-size: 3.125rem;
+    line-height: 55px;
+    font-weight: bold;
+  } @else if $size == 26 {
+    font-size: 1.625rem;
+    list-style: 21.7px;
+  } @else if $size == 19 {
+    font-size: 1.1875rem;
+    line-height: 16px;
+  } @else if $size == 13 {
+    font-size: 0.8125rem;
+    line-height: 10.8px;
+  } @else if $size == 64 {
+    font-size: 4rem;
+    font-weight: bold;
+  } @else if $size == 28 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 30px;
+  }
+}
+
+@mixin first-break {
+  @media (max-width: 1431px) {
+    @content;
+  }
+}
+
+@mixin second-break {
+  @media (max-width: 931px) {
+    @content;
+  }
+}
+
+@mixin third-break {
+  @media (max-width: 531px) {
+    @content;
+  }
+}
