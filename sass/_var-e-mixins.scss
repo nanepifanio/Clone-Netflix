@@ -1,7 +1,7 @@
 $cor-primaria: #f40612;
 $cor-secundaria: #fff;
-$bg-body: #1d1815;
-$color-borderbottom-section: #222222;
+$bg-body: #000000;
+$border-section-color: #222222;
 $grey: #6a756a;
 
 @mixin font-size($size) {
@@ -25,6 +25,10 @@ $grey: #6a756a;
     font-size: 1.75rem;
     font-weight: bold;
     line-height: 30px;
+  } @else if $size == 40 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 44px;
   }
 }
 
@@ -44,4 +48,17 @@ $grey: #6a756a;
   @media (max-width: 531px) {
     @content;
   }
+}
+
+%sections {
+  display: flex;
+  padding: 50px calc((100% - 1100px) / 2);
+  align-items: center;
+  border-top: 8px solid $border-section-color;
+  justify-content: space-between;
+}
+
+@mixin flex-direction($direction) {
+  flex-direction: $direction;
+  text-align: center;
 }
