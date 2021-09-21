@@ -1,0 +1,16 @@
+.img {
+  position: relative;
+
+  img {
+    position: relative;
+    z-index: 5;
+    max-width: 500px;
+  }
+
+  video {
+    position: absolute;
+    max-width: 370px;
+    right: 63px;
+    top: 75px;
+  }
+}
