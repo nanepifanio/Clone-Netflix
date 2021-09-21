@@ -28,12 +28,6 @@ li {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #000000;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 .bg-intro {
   background: url(../img/netflix-bg-intro.jpg) no-repeat center;
   background-size: cover;
@@ -260,6 +254,27 @@ header .lang--enter a {
   }
 }
 
+.img {
+  position: relative;
+}
+.img img {
+  position: relative;
+  z-index: 5;
+  max-width: 500px;
+}
+.img video {
+  position: absolute;
+  max-width: 370px;
+  right: 63px;
+  top: 75px;
+}
+
+body {
+  background-color: #000000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .sections .sections-text {
   margin-left: 40px;
 }
@@ -302,19 +317,4 @@ header .lang--enter a {
     flex-direction: column;
     text-align: center;
   }
-}
-
-.img {
-  position: relative;
-}
-.img img {
-  position: relative;
-  z-index: 5;
-  max-width: 500px;
-}
-.img video {
-  position: absolute;
-  max-width: 370px;
-  right: 63px;
-  top: 75px;
 }
