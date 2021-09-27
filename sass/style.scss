@@ -3,6 +3,8 @@
 @import "intro";
 @import "aproveite";
 @import "offline";
+@import "quando-quiser";
+@import "infantil";
 
 body {
   background-color: $bg-body;
@@ -12,14 +14,6 @@ body {
 
 .sections {
   @extend %sections;
-
-  .sections-text {
-    margin-left: 40px;
-
-    @include second-break {
-      margin-left: 0;
-    }
-  }
 
   .big-size {
     @include font-size(50);

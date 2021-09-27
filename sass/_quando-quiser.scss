@@ -1,0 +1,11 @@
+.assista {
+  @extend %section-text-left;
+
+  .assista-video {
+    video {
+      max-width: 320px;
+      left: 90px;
+      top: 30px;
+    }
+  }
+}

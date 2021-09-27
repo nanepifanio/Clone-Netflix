@@ -6,6 +6,25 @@
   justify-content: space-between;
 }
 
+.assista .section-text, .aproveite .section-text {
+  margin-left: 50px;
+}
+@media (max-width: 931px) {
+  .assista .section-text, .aproveite .section-text {
+    margin: 0px 10px;
+  }
+}
+
+.infantil .section-text, .download-offline .section-text {
+  margin-right: 40px;
+}
+@media (max-width: 931px) {
+  .infantil .section-text, .download-offline .section-text {
+    order: -1;
+    margin: 0px 10px;
+  }
+}
+
 body,
 p,
 h1,
@@ -269,20 +288,64 @@ header .lang--enter a {
   top: 75px;
 }
 
+.download-image {
+  position: relative;
+}
+.download-image img {
+  max-width: 400px;
+}
+.download-image .download {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  background-color: #000000;
+  border: 2px solid #222222;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+}
+.download-image .download::after {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #005ac5;
+  border-radius: 50%;
+  margin: 0px 20px;
+}
+.download-image .download img {
+  max-width: 60px;
+  margin-right: 15px;
+}
+.download-image .download .nome-filme p:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.download-image .download .nome-filme p:last-child {
+  font-size: 0.8125rem;
+  line-height: 10.8px;
+  color: #005ac5;
+  line-height: 15px;
+  text-align: left;
+}
+
+.assista .assista-video video {
+  max-width: 320px;
+  left: 90px;
+  top: 30px;
+}
+
+.infantil .crianca-img img {
+  max-width: 450px;
+}
+
 body {
   background-color: #000000;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.sections .sections-text {
-  margin-left: 40px;
-}
-@media (max-width: 931px) {
-  .sections .sections-text {
-    margin-left: 0;
-  }
-}
 .sections .big-size {
   font-size: 3.125rem;
   line-height: 55px;

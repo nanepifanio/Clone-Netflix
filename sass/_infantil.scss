@@ -1,0 +1,9 @@
+.infantil {
+  .crianca-img {
+    img {
+      max-width: 450px;
+    }
+  }
+
+  @extend %section-text-right;
+}
