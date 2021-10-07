@@ -1,0 +1,38 @@
+.sections.faq {
+  @include flex-direction(column);
+
+  .section-faq {
+    max-width: 800px;
+    margin: 0px 150px;
+
+    h1 {
+      margin-bottom: 50px;
+    }
+
+    .faq-text {
+      text-align: left;
+      @include font-size(26);
+
+      dt,
+      dd {
+        padding: 20px;
+      }
+
+      dt {
+        background-color: $faq-bg-color;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &::after {
+          content: "+";
+        }
+      }
+
+      dd {
+        margin: 0.5px 0 1px 0;
+        background-color: $faq-bg-color;
+      }
+    }
+  }
+}

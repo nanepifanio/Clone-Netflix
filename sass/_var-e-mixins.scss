@@ -3,6 +3,7 @@ $cor-secundaria: #fff;
 $bg-body: #000000;
 $border-section-color: #222222;
 $grey: #6a756a;
+$faq-bg-color: #303030;
 
 @mixin font-size($size) {
   @if $size == 50 {
