@@ -3,6 +3,10 @@
   background-size: cover;
   height: 100vh;
 
+  @include second-break {
+    height: 720px;
+  }
+
   @include third-break {
     height: 550px;
   }
