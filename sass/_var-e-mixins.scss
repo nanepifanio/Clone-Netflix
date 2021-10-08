@@ -30,6 +30,9 @@ $faq-bg-color: #303030;
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 44px;
+  } @else if $size == 20 {
+    font-size: 1.25rem;
+    line-height: 25px;
   }
 }
 
