@@ -3,6 +3,7 @@ $cor-secundaria: #fff;
 $bg-body: #000000;
 $border-section-color: #222222;
 $grey: #6a756a;
+$faq-bg-color: #303030;
 
 @mixin font-size($size) {
   @if $size == 50 {
@@ -29,6 +30,9 @@ $grey: #6a756a;
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 44px;
+  } @else if $size == 20 {
+    font-size: 1.25rem;
+    line-height: 25px;
   }
 }
 

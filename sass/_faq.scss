@@ -1,0 +1,117 @@
+@keyframes accordion {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 450px;
+  }
+}
+
+.sections.faq {
+  @include flex-direction(column);
+
+  .section-faq {
+    margin: 0px 150px;
+    width: 70%;
+
+    @include second-break {
+      margin: 0px 80px;
+    }
+
+    @include third-break {
+      width: 100%;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 50px;
+
+      @include second-break {
+        margin-bottom: 30px;
+      }
+
+      @include third-break {
+        margin-bottom: 20px;
+      }
+    }
+
+    .faq-text {
+      text-align: left;
+      @include font-size(26);
+      margin: 0;
+
+      @include second-break {
+        @include font-size(20);
+      }
+
+      @include third-break {
+        @include font-size(19);
+        line-height: 23px;
+      }
+
+      dt {
+        background-color: $faq-bg-color;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+        cursor: pointer;
+
+        padding: 25px;
+
+        @include second-break {
+          padding: 15px;
+        }
+
+        &::after {
+          content: "+";
+        }
+
+        &.ativo {
+          &::after {
+            content: "x";
+          }
+        }
+      }
+
+      dd {
+        margin: 1px 0 8px 0;
+        background-color: $faq-bg-color;
+        transition: linear 0.2s;
+        max-height: 0;
+        overflow: hidden;
+
+        p {
+          padding: 25px;
+
+          @include second-break {
+            padding: 15px;
+          }
+        }
+
+        &.ativo {
+          max-height: 450px;
+        }
+      }
+    }
+  }
+
+  .form-faq {
+    padding: 0;
+    margin-top: 60px;
+
+    @include second-break {
+      margin-top: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      @include font-size(19);
+      line-height: 20px;
+
+      @include second-break {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
